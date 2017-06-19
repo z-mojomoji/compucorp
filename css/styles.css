@@ -1,0 +1,172 @@
+@import url(../fonts/museosans/museosans.css);
+@import url(../fonts/museosans-rounded/museosansrounded.css);
+@import url(../fonts/opensans/open-sans.css);
+@import url(normalize.css);
+.Container {
+  width: 1260px;
+  position: relative;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 0 75px; }
+  .Header .Container {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    justify-content: space-between; }
+
+.Header {
+  top: 0px;
+  max-height: 80px;
+  z-index: 999;
+  width: 100%;
+  padding-top: 24px;
+  background: none;
+  overflow: hidden;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  padding-bottom: 24px;
+  background-color: white; }
+  .Header-logo {
+    width: 14%;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    align-items: center; }
+    .Header-logo img {
+      width: 100%; }
+  .Header--sticky {
+    background-color: rgba(255, 255, 255, 0.93);
+    position: fixed; }
+    .Header--sticky + .HeroBanner {
+      margin-top: 91px; }
+
+.NavigationBar {
+  display: inline-block;
+  vertical-align: middle;
+  width: 60%; }
+  .NavigationBar-toggle {
+    display: none;
+    cursor: pointer;
+    font-size: 20px;
+    position: absolute;
+    right: 22px;
+    top: 0;
+    width: 30px;
+    -webkit-transition: all 200ms ease-in;
+    -moz-transition: all 200ms ease-in;
+    transition: all 200ms ease-in; }
+    .NavigationBar-toggle span {
+      width: 30px;
+      height: 4px;
+      margin-bottom: 6px;
+      border-radius: 1000px;
+      background: #8f8f8f;
+      display: block; }
+  .NavigationBar-list {
+    list-style: none;
+    overflow: hidden;
+    text-align: right;
+    float: right;
+    margin: 0;
+    padding: 0; }
+    .NavigationBar-listItem {
+      display: inline-block;
+      margin-left: 35px;
+      line-height: 1.5; }
+  .NavigationBar-link {
+    text-transform: uppercase;
+    font-size: 14px;
+    font-family: 'MuseoSans', Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    text-decoration: none; }
+  .NavigationBar--open {
+    max-height: 400px !important; }
+    .NavigationBar--open .NavigationBar-toggle {
+      transform: rotate(-90deg);
+      -webkit-transform: rotate(-90deg); }
+
+.Button {
+  padding: 8px 24px;
+  vertical-align: middle;
+  font-family: 'MuseoSans', Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  font-weight: 700;
+  border-radius: 3px;
+  -webkit-radius: 3px;
+  -moz-radius: 3px;
+  transition: all 0.3s ease 0s;
+  text-transform: uppercase;
+  text-align: center; }
+  .Button-lined {
+    border: 2px solid #aedfde;
+    color: #5ebfbd; }
+    .Button-lined:hover {
+      background-color: #aedfde;
+      color: white; }
+  .Button-primary {
+    border: 1px solid #0ebdc0;
+    color: white;
+    background-color: #5bc0c3; }
+    .Button-primary:hover {
+      background-color: #aedfde;
+      color: white; }
+  .Button--inline {
+    display: inline-block; }
+
+@media only screen and (max-width: 766px) {
+  .Header {
+    max-height: 35px;
+    padding-bottom: 10px;
+    padding-top: 20px;
+    text-align: left; }
+    .Header-logo {
+      width: 100px; }
+
+  .Container {
+    width: 100%;
+    padding: 0 20px; }
+
+  .NavigationBar {
+    width: 100%; }
+    .NavigationBar-list {
+      padding-top: 18px;
+      margin-bottom: 22px;
+      float: left;
+      text-align: center;
+      width: 100%; }
+      .NavigationBar-listItem {
+        width: 100%;
+        padding: 7px 0;
+        margin: 0; }
+    .NavigationBar-toggle {
+      display: block; } }
+.HeroBanner {
+  background-image: url(../img/hero.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 210px;
+  padding: 85px 0;
+  text-align: center;
+  color: white; }
+
+.title {
+  font-size: 50px;
+  margin: 0px 0 30px;
+  line-height: 43px;
+  font-family: "MuseoSansRounded", Arial, Helvetica, sans-serif;
+  font-weight: 300;
+  text-transform: uppercase; }
+
+.subtitle {
+  font-family: "MuseoSans", Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #7d7d81;
+  font-weight: 500; }
+
+/*# sourceMappingURL=styles.css.map */
