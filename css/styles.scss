@@ -174,51 +174,7 @@
     }
 }
 
-@media only screen and (max-width: 766px) {
 
-    .Header {
-        max-height: 35px;
-        padding-bottom: 10px;
-        padding-top: 20px;
-        text-align: left;
-        &-logo {
-            width: 145px;
-            display: block;
-            max-height: 25px;
-        }
-    }
-
-    .Container {
-        width: 100%;
-        padding: 0 20px;
-        .Event & ,
-        .Header & {
-            display: block;
-        }
-    }
-
-  .NavigationBar {
-    width: 100%;
-    display: block;
-    &-list {
-        padding-top: 18px;
-        margin-bottom: 22px;
-        float: none;
-        text-align: center;
-        width: 100%;
-
-        &Item {
-            width: 100%;
-            padding: 7px 0;
-            margin: 0;
-        }
-    }
-
-    &-toggle {
-        display: block;
-    }
-  }
-}
 
 .HeroBanner {
     background-image: url(../img/hero.jpg);
@@ -537,5 +493,64 @@
 
     a {
         color: #5dc0c9;
+    }
+}
+
+@media only screen and (max-width: 766px) {
+
+    .Header {
+        max-height: 35px;
+        padding-bottom: 10px;
+        padding-top: 20px;
+        text-align: left;
+        &-logo {
+            width: 145px;
+            display: block;
+            max-height: 25px;
+        }
+    }
+
+    .Container {
+        width: 100%;
+        padding: 0 20px;
+        .Event & ,
+        .Header & {
+            display: block;
+        }
+
+        .HeroBanner & {
+            padding: 0 20%;
+        }
+    }
+
+    .NavigationBar {
+        width: 100%;
+        display: block;
+        &-list {
+            padding-top: 18px;
+            margin-bottom: 22px;
+            float: none;
+            text-align: center;
+            width: 100%;
+
+            &Item {
+                width: 100%;
+                padding: 7px 0;
+                margin: 0;
+            }
+        }
+
+        &-toggle {
+            display: block;
+        }
+    }
+
+    .HeroBanner {
+        padding: 30px 0;
+    }
+
+    .title {
+        font-size: 8vw;
+        line-height: 9vw;
     }
 }
