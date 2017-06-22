@@ -23,7 +23,15 @@ $('.NavigationBar-link').click(function() {
     }
 });
 
+
+
 $(document).ready(function(){
+
+//Header Sliderin 
+var navHeight = $('.Header').innerHeight();
+$('.Header').css("top", -navHeight);
+
+//Slider
 
 var slnum= 0; //current Slide
 var maxnum = ($(".Slider-page").length)-1; //number of all slides

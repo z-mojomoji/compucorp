@@ -45,6 +45,7 @@
     -webkit-transition: all 0.3s;
     transition: all 0.3s;
     padding-bottom: 24px;
+    transition: all 0.5s ease;
     background-color: rgba(255, 255, 255, 1);
 
     &-logo {
@@ -59,6 +60,7 @@
     &--sticky {
         background-color: rgba(255, 255, 255, 0.93);
         position: fixed;
+        top: 0 !important;
 
         & + .HeroBanner {
             margin-top: 91px;
@@ -70,6 +72,14 @@
     display: inline-block;
     vertical-align: middle;
     width: 60%;
+
+    &::after {
+        content: '';
+        clear: both;
+        opacity: 0;
+        height: 0;
+        display: block;
+    } 
 
     &-toggle {
         display: none;
@@ -172,22 +182,28 @@
         padding-top: 20px;
         text-align: left;
         &-logo {
-            width: 100px;
+            width: 145px;
+            display: block;
+            max-height: 25px;
         }
     }
 
     .Container {
         width: 100%;
         padding: 0 20px;
+        .Event & ,
+        .Header & {
+            display: block;
+        }
     }
 
   .NavigationBar {
     width: 100%;
-
+    display: block;
     &-list {
         padding-top: 18px;
         margin-bottom: 22px;
-        float: left;
+        float: none;
         text-align: center;
         width: 100%;
 
@@ -515,7 +531,7 @@
     &-icon {
         display: inline-block;
         vertical-align: middle;
-        font-size: 18px;
+        font-size: 18   px;
         margin: 0px 10px;
     }
 

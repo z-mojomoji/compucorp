@@ -25,6 +25,7 @@
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   padding-bottom: 24px;
+  transition: all 0.5s ease;
   background-color: white; }
   .Header-logo {
     width: 14%;
@@ -39,7 +40,8 @@
       width: 100%; }
   .Header--sticky {
     background-color: rgba(255, 255, 255, 0.93);
-    position: fixed; }
+    position: fixed;
+    top: 0 !important; }
     .Header--sticky + .HeroBanner {
       margin-top: 91px; }
 
@@ -47,6 +49,12 @@
   display: inline-block;
   vertical-align: middle;
   width: 60%; }
+  .NavigationBar::after {
+    content: '';
+    clear: both;
+    opacity: 0;
+    height: 0;
+    display: block; }
   .NavigationBar-toggle {
     display: none;
     cursor: pointer;
@@ -123,18 +131,23 @@
     padding-top: 20px;
     text-align: left; }
     .Header-logo {
-      width: 100px; }
+      width: 145px;
+      display: block;
+      max-height: 25px; }
 
   .Container {
     width: 100%;
     padding: 0 20px; }
+    .Event .Container, .Header .Container {
+      display: block; }
 
   .NavigationBar {
-    width: 100%; }
+    width: 100%;
+    display: block; }
     .NavigationBar-list {
       padding-top: 18px;
       margin-bottom: 22px;
-      float: left;
+      float: none;
       text-align: center;
       width: 100%; }
       .NavigationBar-listItem {
@@ -382,7 +395,7 @@
   .Footer-icon {
     display: inline-block;
     vertical-align: middle;
-    font-size: 18px;
+    font-size: 18   px;
     margin: 0px 10px; }
   .Footer a {
     color: #5dc0c9; }
