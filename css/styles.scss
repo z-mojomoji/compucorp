@@ -264,6 +264,27 @@
     text-transform: uppercase;
 }
 
+.Seperator {
+
+    &--bright{
+        border-bottom: 1px solid #d9dadd;
+    }
+
+    &--dark {
+        border-bottom: 1px solid #575b64;
+    }
+
+    &--lg {
+        padding-bottom: 50px;
+        margin-bottom: 50px;
+    }
+
+    &--md {
+        padding-bottom: 25px;
+        margin-bottom: 25px;
+    }
+}
+
 .Row {
     padding: 35px 0;
     &:nth-child(2n) {
@@ -345,7 +366,9 @@
         padding: 30px 0;
         font-weight: 500;
     }
+}
 
+.Mission {
     &-card {
         position: relative;
         background-color: white;
@@ -387,5 +410,116 @@
             padding-top: 40px;
             padding-bottom: 40px;
         }
+    }
+}
+
+
+.Slider{
+    position: relative;
+    margin-top: 15px;
+
+    &-container {
+        width: 100%;
+        min-height: 125px;
+        position: relative;
+        overflow: hidden;
+        margin: 0 auto;
+
+        &List {
+            width: 10000px;
+            overflow: auto;
+            min-height: 125px;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            position: absolute;
+            left: 0;
+        }
+    }
+
+    &-page {
+        width: 980px;
+        overflow: auto;
+        min-height: 125px;
+        float: left;
+        
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        
+        justify-content: space-between;
+
+        &::after{
+            content: '';
+            clear: both;
+            display: inline-block;
+            opacity: 0;
+            height: 0;
+            font-size: 0;
+        }
+    }
+
+    &-logo {
+        width: 100%;
+        &Container {
+            width: 20%;
+            padding: 0 50px;
+            box-sizing: border-box;
+            @include VerticalAlign;
+            display: -ms-flexbox;
+            display: -webkit-inline-flex;
+            display: inline-flex;
+        }
+    }
+
+    &-pagination {
+        width: 100%;
+        padding-top: 45px;
+        min-height: 20px;
+
+        &List {
+            list-style: none;
+            margin: 0 auto;
+            padding: 0;
+            text-align: center;
+        }
+
+        &Item {
+            display: inline-block;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        &Dot {
+            width: 10px;
+            height: 10px;
+            background-color: #989eac;
+            border-radius:50%;
+            display: block;
+            cursor: pointer;
+
+            &--active {
+                background-color: #61c0bd;
+            }
+        }
+    }
+}
+
+
+.Footer {
+    background-color: #454850;
+    color: #979eb1;
+    text-align: center;
+    padding: 30px 0 20px;
+
+    &-icon {
+        display: inline-block;
+        vertical-align: middle;
+        font-size: 18px;
+        margin: 0px 10px;
+    }
+
+    a {
+        color: #5dc0c9;
     }
 }
