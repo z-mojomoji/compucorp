@@ -25,52 +25,50 @@ $('.NavigationBar-link').click(function() {
 
 
 
-$(document).ready(function(){
 
-//Header Sliderin 
-var navHeight = $('.Header').innerHeight();
-$('.Header').css("top", -navHeight);
+// //Should be in doc ready
+// //Header Sliderin 
+//     var navHeight = $('.Header').innerHeight();
+//     $('.Header').css("top", -navHeight);
 
-//Slider
+//     //Slider
 
-var slnum= 0; //current Slide
-var maxnum = ($(".Slider-page").length)-1; //number of all slides
-var pageWidth = $(".Slider-container").innerWidth(); //get the width of container
+//     var slnum= 0; //current Slide
+//     var maxnum = ($(".Slider-page").length)-1; //number of all slides
+//     var pageWidth = $(".Slider-container").innerWidth(); //get the width of container
 
-$('.Slider-page').css('width', pageWidth);
+//     $('.Slider-page').css('width', pageWidth);
 
-var toSlide = $(".Slider-page").innerWidth(); //width per slide
+//     var toSlide = $(".Slider-page").innerWidth(); //width per slide
 
-$(window).resize(function() {
-    toSlide = $(".Slider-page").innerWidth(); //width per slide
-});
-    
-$('.Slider').on('click','.Slider-paginationDot',function(){
-    var getPage=$(this).attr('pagenum');
-    slnum = parseInt(getPage);
-    $('.Slider-paginationDot').removeClass('Slider-paginationDot--active');
-    $('.page'+slnum).addClass('Slider-paginationDot--active');
-    var lefarrnum = -(parseInt(slnum)*toSlide);//change width of a page
-    $('.Slider-containerList').animate({left:lefarrnum},{queue: false, duration: 300});
-});
-    
-// clear auto slide
-$('.Slider').on('mouseover',function(){
-	window.clearInterval(timerA);
-}).on('mouseout',function(){
-	timerA = window.setInterval("autoslide()", 5000);
-});    
+//     $(window).resize(function() {
+//         toSlide = $(".Slider-page").innerWidth(); //width per slide
+//     });
+        
+//     $('.Slider').on('click','.Slider-paginationDot',function(){
+//         var getPage=$(this).attr('pagenum');
+//         slnum = parseInt(getPage);
+//         $('.Slider-paginationDot').removeClass('Slider-paginationDot--active');
+//         $('.page'+slnum).addClass('Slider-paginationDot--active');
+//         var lefarrnum = -(parseInt(slnum)*toSlide);//change width of a page
+//         $('.Slider-containerList').animate({left:lefarrnum},{queue: false, duration: 300});
+//     });
+        
+//     // clear auto slide
+//     $('.Slider').on('mouseover',function(){
+//         window.clearInterval(timerA);
+//     }).on('mouseout',function(){
+//         timerA = window.setInterval("autoslide()", 5000);
+//     });    
 
-});
-
-// auto slide1
-var btnnum = 0;
-var timerA;
-timerA = window.setInterval("autoslide()", 5000);
-function autoslide(){ 
-    var lastSlide = ($(".Slider-page").length)-1; //number of all slides 
-	btnnum = parseInt(btnnum)+1;
-	if(btnnum>lastSlide){btnnum=0;}//change page number accordingly
-	jQuery('.Slider-paginationDot.page'+ btnnum).click();
-}
+// // auto slide1 outside doc ready 
+// var btnnum = 0;
+// var timerA;
+// timerA = window.setInterval("autoslide()", 5000);
+// function autoslide(){ 
+//     var lastSlide = ($(".Slider-page").length)-1; //number of all slides 
+// 	btnnum = parseInt(btnnum)+1;
+// 	if(btnnum>lastSlide){btnnum=0;}//change page number accordingly
+// 	jQuery('.Slider-paginationDot.page'+ btnnum).click();
+// }
  

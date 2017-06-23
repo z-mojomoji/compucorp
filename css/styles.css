@@ -1,7 +1,6 @@
 @import url(../fonts/museosans/museosans.css);
 @import url(../fonts/museosans-rounded/museosansrounded.css);
 @import url(../fonts/opensans/open-sans.css);
-@import url(normalize.css);
 .Container {
   width: 1260px;
   position: relative;
@@ -282,78 +281,76 @@
     padding-top: 40px;
     padding-bottom: 40px; }
 
-.Slider {
-  position: relative;
-  margin-top: 15px; }
-  .Slider-container {
-    width: 100%;
-    min-height: 125px;
-    position: relative;
+.Member-container.owl-carousel .owl-stage-outer {
+  padding-bottom: 25px; }
+
+.owl-centered .LogoSlider-logo {
+  width: 50% !important;
+  margin: auto;
+  display: block; }
+
+.owl-centered .owl-wrapper {
+  display: table !important; }
+
+.owl-centered .owl-item {
+  display: table-cell;
+  float: none;
+  vertical-align: middle; }
+
+.owl-centered .owl-item > .LogoSlider-logoContainer {
+  text-align: center; }
+
+.Blog-container {
+  position: relative; }
+.Blog-story {
+  padding: 0 15px; }
+.Blog-title {
+  font-weight: 700;
+  color: #61c0bd;
+  font-size: 14px;
+  text-align: left;
+  border-bottom: 1px solid #f1f2f5;
+  padding-bottom: 13px;
+  display: block;
+  /* Fallback for non-webkit */
+  display: -webkit-box;
+  font-size: 14px;
+  line-height: 16px;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  height: 16px; }
+.Blog-summary {
+  margin: 22px 0; }
+  .Blog-summaryText {
+    display: block;
+    /* Fallback for non-webkit */
+    display: -webkit-box;
+    font-size: 14px;
+    line-height: 22px;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
     overflow: hidden;
-    margin: 0 auto; }
-    .Slider-containerList {
-      width: 10000px;
-      overflow: auto;
-      min-height: 125px;
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      position: absolute;
-      left: 0; }
-  .Slider-page {
-    width: 980px;
-    overflow: auto;
-    min-height: 125px;
-    float: left;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    justify-content: space-between; }
-    .Slider-page::after {
-      content: '';
-      clear: both;
-      display: inline-block;
-      opacity: 0;
-      height: 0;
-      font-size: 0; }
-  .Slider-logo {
-    width: 100%; }
-    .Slider-logoContainer {
-      width: 20%;
-      padding: 0 50px;
-      box-sizing: border-box;
-      display: -ms-flexbox;
-      display: -webkit-flex;
-      display: flex;
-      -ms-flex-align: center;
-      -webkit-align-items: center;
-      -webkit-box-align: center;
-      align-items: center;
-      display: -ms-flexbox;
-      display: -webkit-inline-flex;
-      display: inline-flex; }
-  .Slider-pagination {
-    width: 100%;
-    padding-top: 45px;
-    min-height: 20px; }
-    .Slider-paginationList {
-      list-style: none;
-      margin: 0 auto;
-      padding: 0;
-      text-align: center; }
-    .Slider-paginationItem {
-      display: inline-block;
-      margin-right: 10px;
-      vertical-align: middle; }
-    .Slider-paginationDot {
-      width: 10px;
-      height: 10px;
-      background-color: #989eac;
-      border-radius: 50%;
-      display: block;
-      cursor: pointer; }
-      .Slider-paginationDot--active {
-        background-color: #61c0bd; }
+    text-overflow: ellipsis;
+    height: 88px;
+    /* Fallback for non-webkit */ }
+.Blog-publishDate {
+  border-top: 1px solid #f1f2f5;
+  padding-top: 20px; }
+.Blog-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 48px;
+  color: #5fc0c3; }
+  .Blog-arrow:hover {
+    color: #52d3d7; }
+  .Blog-arrowLeft {
+    left: -20px; }
+  .Blog-arrowRight {
+    right: -20px; }
 
 .Footer {
   background-color: #454850;
@@ -363,7 +360,7 @@
   .Footer-icon {
     display: inline-block;
     vertical-align: middle;
-    font-size: 18   px;
+    font-size: 18px;
     margin: 0px 10px; }
   .Footer a {
     color: #5dc0c9; }

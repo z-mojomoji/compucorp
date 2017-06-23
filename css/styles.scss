@@ -1,7 +1,6 @@
 @import '../fonts/museosans/museosans.css';
 @import '../fonts/museosans-rounded/museosansrounded.css';
 @import '../fonts/opensans/open-sans.css';
-@import 'normalize.css';
 
 @mixin VerticalAlign {
     display: -ms-flexbox;
@@ -15,6 +14,23 @@
     align-items: center;
 }
 
+
+@mixin ellipsis($font-size, $line-height,$lines:1) {
+    display: block; /* Fallback for non-webkit */
+    display: -webkit-box;
+    font-size: $font-size;
+    line-height: $line-height;
+    -webkit-line-clamp: $lines;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    @if ($lines == 1) {
+        white-space: nowrap;
+        height: $line-height;
+    } @else {
+        height: $line-height*$lines; /* Fallback for non-webkit */
+    }
+}
 
 
 .Container {
@@ -385,94 +401,86 @@
     }
 }
 
-
-.Slider{
-    position: relative;
-    margin-top: 15px;
-
+.Member {
     &-container {
-        width: 100%;
-        min-height: 125px;
-        position: relative;
-        overflow: hidden;
-        margin: 0 auto;
-
-        &List {
-            width: 10000px;
-            overflow: auto;
-            min-height: 125px;
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            position: absolute;
-            left: 0;
+        &.owl-carousel .owl-stage-outer {
+            padding-bottom:25px;
         }
     }
+}
 
-    &-page {
-        width: 980px;
-        overflow: auto;
-        min-height: 125px;
-        float: left;
-        
-        display: -ms-flexbox;
-        display: -webkit-flex;
-        display: flex;
-        
-        justify-content: space-between;
-
-        &::after{
-            content: '';
-            clear: both;
-            display: inline-block;
-            opacity: 0;
-            height: 0;
-            font-size: 0;
-        }
-    }
-
+.LogoSlider{
     &-logo {
-        width: 100%;
-        &Container {
-            width: 20%;
-            padding: 0 50px;
-            box-sizing: border-box;
-            @include VerticalAlign;
-            display: -ms-flexbox;
-            display: -webkit-inline-flex;
-            display: inline-flex;
+        .owl-centered & {
+            width: 50% !important;
+            margin: auto;
+            display: block;
+        }
+    }
+}
+
+//Customize owl carousel 
+
+.owl-centered .owl-wrapper {
+  display: table !important;
+}
+.owl-centered .owl-item {
+  display: table-cell;
+  float: none;
+  vertical-align: middle;
+}
+.owl-centered .owl-item > .LogoSlider-logoContainer {
+  text-align: center;
+}
+
+.Blog {
+    &-container {
+        position: relative;
+    }
+    
+    &-story {
+        padding:0 15px;
+    }   
+
+    &-title {
+        font-weight: 700;
+        color: #61c0bd;
+        font-size: 14px;
+        text-align: left;
+        border-bottom: 1px solid #f1f2f5;
+        padding-bottom: 13px;
+        @include ellipsis(14px, 16px);
+    }
+    
+    &-summary {
+        margin: 22px 0;
+        &Text {
+            @include ellipsis(14px, 22px, 4);
         }
     }
 
-    &-pagination {
-        width: 100%;
-        padding-top: 45px;
-        min-height: 20px;
+    &-publishDate {
+        border-top: 1px solid #f1f2f5;
+        padding-top: 20px;
+    }
 
-        &List {
-            list-style: none;
-            margin: 0 auto;
-            padding: 0;
-            text-align: center;
+    &-arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 48px;
+        color: #5fc0c3;
+
+        &:hover{
+            color: #52d3d7;
         }
 
-        &Item {
-            display: inline-block;
-            margin-right: 10px;
-            vertical-align: middle;
+        &Left {
+            left: -20px;
         }
 
-        &Dot {
-            width: 10px;
-            height: 10px;
-            background-color: #989eac;
-            border-radius:50%;
-            display: block;
-            cursor: pointer;
-
-            &--active {
-                background-color: #61c0bd;
-            }
+        &Right {
+            right: -20px;
         }
     }
 }
@@ -487,7 +495,7 @@
     &-icon {
         display: inline-block;
         vertical-align: middle;
-        font-size: 18   px;
+        font-size: 18px;
         margin: 0px 10px;
     }
 
