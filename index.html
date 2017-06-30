@@ -48,8 +48,9 @@
     <article class="HeroBanner" id="herobanner">
         <div class="Container">
             <h1 class="title">Sharing Ideas For Charities</h1>
-            <h2 class="heading1">Many charities’ goals are similar, as is the functionality we require, but little <br>shared working takes place.</h2>
-            <p>By working together, driving shared areas of interest and influencing open source <br>developments we can bring efficiencies, improve the digital experience for our users, and <br>have great impact.</p>
+            <h2 class="heading1">Many charities’ goals are similar, as is the functionality we require, but little <br class="showd">shared working takes place.</h2>
+            <p>By working together, driving shared areas of interest and influencing open source <br class="showd">
+            developments we can bring efficiencies, improve the digital experience for our users, and <br class="showd">have great impact.</p>
             <h2 class="heading1">Together we can make a bigger diference.</h2>
         </div>
     </article>
@@ -240,46 +241,5 @@
     </footer>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js"></script> 
    <script src="js/scripts.js"></script>
-   <script>
-    
-$(document).ready(function(){
-    $(".Members-container").owlCarousel({
-        loop:true,
-        nav:false,
-        dots:true,
-        autoplay:true,
-        responsiveClass:true,
-        responsive:{
-            0:{
-                items:1,
-            },
-            600:{
-                items:3,
-            },
-            1000:{
-                items:5,
-            }
-        }
-    });   
-
-    $(".Blog-container").owlCarousel({
-        loop:true,
-        responsiveClass:true,
-        nav:true,
-        navText: ["<i class='fa fa-angle-left Blog-arrow Blog-arrowLeft'></i>","<i class='fa fa-angle-right Blog-arrow Blog-arrowRight'></i>"],
-        responsive:{
-            0:{
-                items:1,
-            },
-            600:{
-                items:3,
-            },
-            1000:{
-                items:4,
-            }
-        }
-    }); 
-});
-    </script>
 </body>
 </html>

@@ -365,6 +365,9 @@
   .Footer a {
     color: #5dc0c9; }
 
+.showd {
+  display: inline-block; }
+
 @media only screen and (max-width: 766px) {
   .Header {
     max-height: 35px;
@@ -382,7 +385,7 @@
     .Event .Container, .Header .Container {
       display: block; }
     .HeroBanner .Container {
-      padding: 0 20%; }
+      padding: 0 8%; }
 
   .NavigationBar {
     width: 100%;
@@ -402,9 +405,38 @@
 
   .HeroBanner {
     padding: 30px 0; }
+    .HeroBanner .heading1 {
+      font-size: 18px;
+      line-height: 28px; }
 
   .title {
     font-size: 8vw;
-    line-height: 9vw; } }
+    line-height: 9vw; }
+
+  .Event-info {
+    text-align: center;
+    display: block;
+    margin: 0px auto; }
+    .Event-info .heading1--green {
+      display: block;
+      line-height: 30px; }
+  .Event-register {
+    display: block;
+    margin: 20px auto 0;
+    text-align: center; }
+
+  .GetInvolve-listItem {
+    width: 100%; }
+    .GetInvolve-listItem:nth-child(3n+2) {
+      margin: 10px 0; }
+
+  .Mission-card {
+    width: 100%;
+    box-sizing: border-box; }
+    .Mission-card:nth-child(3n+2) {
+      margin: 45px 0 20px; }
+
+  .showd {
+    display: none; } }
 
 /*# sourceMappingURL=styles.css.map */
